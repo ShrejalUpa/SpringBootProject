@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Student Details</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+	<h1>Student Details</h1>
+
+	<h2>Add Student</h2>
+	<form id="DetailsForm">
+		<label for="firstName">First Name:</label>
+		<input type="text" id="firstName" name="firstName" required><br><br>
+
+		<label for="lastName">Last Name:</label>
+		<input type="text" id="lastName" name="lastName" required><br><br>
+
+		<label for="dob">Date of Birth:</label>
+		<input type="text" id="dob" name="dob" placeholder="DD/MM/YYYY" required><br><br>
+
+		<label for="school">School:</label>
+		<select id="school" name="school" required>
+			<option value="">Select School</option>
+			<option value="school1">Mount Mary School</option>
+			<option value="school2">National School</option>
+			<option value="school3">Divine School</option>
+			<option value="school4">Xavier School</option>
+		</select><br><br>
+
+		<label for="subjects">Subject:</label>
+		<select id="subjects" name="subjects[]" multiple required>
+			<option value="subject1">Subject 1</option>
+			<option value="subject2">Subject 2</option>
+		</select><br><br>
+
+		<button type="submit">Submit</button>
+	</form>
+	<h2>Student Details</h2>
+	<form enctype="multipart/form-data">
+		<label for="fileUpload">File:</label>
+		<input type="file" id="fileUpload" name="fileUpload" required>
+		<button type="submit">Submit</button>
+	</form>
+
+	<h4>Student List</h4>
+	<button>Export</button>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Date of Birth</th>
+				<th>School Name</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- Table rows will be dynamically generated -->
+		</tbody>
+	</table>
+	<script src="/js/ajax.js"></script>
+</body>
+
+</html>
+
